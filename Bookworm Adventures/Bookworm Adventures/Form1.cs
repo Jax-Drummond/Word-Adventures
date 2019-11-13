@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +13,13 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Bookworm Adventures\Bookworm Adventures\words.txt");
+        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\words.txt");
+        string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+        string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","R", "S", "T", "U", "V", "W", "X", "Y", "Z","QU" };
+        string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        double[] weights = new double[] { 1, 1.25, 1.25, 1, 1, 1.25, 1, 1.25, 1, 1.75, 1.75, 1, 1.25, 1, 1, 1.25, 1.75, 1, 1, 1, 1, 1.5, 1.5, 2, 1.5, 2 };
         List<string> wordList = new List<string>();
-        public string[] letter = new string[30];
-        public double[] weight = new double[30];
+    
         public Random random = new Random();
         public int rnd, turn = 1;
         public string currentLetter;
@@ -46,58 +49,6 @@ namespace Bookworm_Adventures
             label1.Text = p1Health.ToString();
             label2.Text = p2Health.ToString();
             attackWord.Text = "";
-            letter[1] = "A";
-            letter[2] = "B";
-            letter[3] = "C";
-            letter[4] = "D";
-            letter[5] = "E";
-            letter[6] = "F";
-            letter[7] = "G";
-            letter[8] = "H";
-            letter[9] = "I";
-            letter[10] = "J";
-            letter[11] = "K";
-            letter[12] = "L";
-            letter[13] = "M";
-            letter[14] = "N";
-            letter[15] = "O";
-            letter[16] = "P";
-            letter[17] = "QU";
-            letter[18] = "R";
-            letter[19] = "S";
-            letter[20] = "T";
-            letter[21] = "U";
-            letter[22] = "V";
-            letter[23] = "W";
-            letter[24] = "X";
-            letter[25] = "Y";
-            letter[26] = "Z";
-            weight[1] = 1;
-            weight[2] = 1.25;
-            weight[3] = 1.25;
-            weight[4] = 1;
-            weight[5] = 1;
-            weight[6] = 1.25;
-            weight[7] = 1;
-            weight[8] = 1.25;
-            weight[9] = 1;
-            weight[10] = 1.75;
-            weight[11] = 1.75;
-            weight[12] = 1;
-            weight[13] = 1.25;
-            weight[14] = 1;
-            weight[15] = 1;
-            weight[16] = 1.25;
-            weight[17] = 2.75;
-            weight[18] = 1;
-            weight[19] = 1;
-            weight[20] = 1;
-            weight[21] = 1;
-            weight[22] = 1.5;
-            weight[23] = 1.5;
-            weight[24] = 2;
-            weight[25] = 1.5;
-            weight[26] = 2;
             used[1] = true;
             used[2] = true;
             used[3] = true;
@@ -122,83 +73,83 @@ namespace Bookworm_Adventures
             //Generate letters only for tiles used last turn
             if (used[1] == true)
             {
-                rnd = random.Next(1, 27);
-                button1.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button1.Text = rndletters[rnd];
             }
             if (used[2] == true)
             {
-                rnd = random.Next(1, 27);
-                button2.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button2.Text = rndletters[rnd];
             }
             if (used[3] == true)
             {
-                rnd = random.Next(1, 27);
-                button3.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button3.Text = rndletters[rnd];
             }
             if (used[4] == true)
             {
-                rnd = random.Next(1, 27);
-                button4.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button4.Text = rndletters[rnd];
             }
             if (used[5] == true)
             {
-                rnd = random.Next(1, 27);
-                button5.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button5.Text = rndletters[rnd];
             }
             if (used[6] == true)
             {
-                rnd = random.Next(1, 27);
-                button6.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button6.Text = rndletters[rnd];
             }
             if (used[7] == true)
             {
-                rnd = random.Next(1, 27);
-                button7.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button7.Text = rndletters[rnd];
             }
             if (used[8] == true)
             {
-                rnd = random.Next(1, 27);
-                button8.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button8.Text = rndletters[rnd];
             }
             if (used[9] == true)
             {
-                rnd = random.Next(1, 27);
-                button9.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button9.Text = rndletters[rnd];
             }
             if (used[10] == true)
             {
-                rnd = random.Next(1, 27);
-                button10.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button10.Text = rndletters[rnd];
             }
             if (used[11] == true)
             {
-                rnd = random.Next(1, 27);
-                button11.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button11.Text = rndletters[rnd];
             }
             if (used[12] == true)
             {
-                rnd = random.Next(1, 27);
-                button12.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button12.Text = rndletters[rnd];
             }
             if (used[13] == true)
             {
-                rnd = random.Next(1, 27);
-                button13.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button13.Text = rndletters[rnd];
             }
             if (used[14] == true)
             {
-                rnd = random.Next(1, 27);
-                button14.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button14.Text = rndletters[rnd];
             }
             if (used[15] == true)
             {
-                rnd = random.Next(1, 27);
-                button15.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button15.Text = rndletters[rnd];
             }
             if (used[16] == true)
             {
-                rnd = random.Next(1, 27);
-                button16.Text = letter[rnd];
+                rnd = random.Next(0, 26);
+                button16.Text = rndletters[rnd];
             }
             wordReset();
         }
@@ -253,115 +204,27 @@ namespace Bookworm_Adventures
             {
                 if (word == wordList[i])
                 {
+                    
                     for (int k = 0; k < word.Length; k++)
                     {
+                       
                         currentLetter = word.Substring(k, 1);
-                        if (currentLetter == letter[1])
-                        {
-                            wordWeight = wordWeight + weight[1];
-                        }
-                        if (currentLetter == letter[2])
-                        {
-                            wordWeight = wordWeight + weight[2];
-                        }
-                        if (currentLetter == letter[3])
-                        {
-                            wordWeight = wordWeight + weight[3];
-                        }
-                        if (currentLetter == letter[4])
-                        {
-                            wordWeight = wordWeight + weight[4];
-                        }
-                        if (currentLetter == letter[5])
-                        {
-                            wordWeight = wordWeight + weight[5];
-                        }
-                        if (currentLetter == letter[6])
-                        {
-                            wordWeight = wordWeight + weight[6];
-                        }
-                        if (currentLetter == letter[7])
-                        {
-                            wordWeight = wordWeight + weight[7];
-                        }
-                        if (currentLetter == letter[8])
-                        {
-                            wordWeight = wordWeight + weight[8];
-                        }
-                        if (currentLetter == letter[9])
-                        {
-                            wordWeight = wordWeight + weight[9];
-                        }
-                        if (currentLetter == letter[10])
-                        {
-                            wordWeight = wordWeight + weight[10];
-                        }
-                        if (currentLetter == letter[11])
-                        {
-                            wordWeight = wordWeight + weight[11];
-                        }
-                        if (currentLetter == letter[12])
-                        {
-                            wordWeight = wordWeight + weight[12];
-                        }
-                        if (currentLetter == letter[13])
-                        {
-                            wordWeight = wordWeight + weight[13];
-                        }
-                        if (currentLetter == letter[14])
-                        {
-                            wordWeight = wordWeight + weight[14];
-                        }
-                        if (currentLetter == letter[15])
-                        {
-                            wordWeight = wordWeight + weight[15];
-                        }
-                        if (currentLetter == letter[16])
-                        {
-                            wordWeight = wordWeight + weight[16];
-                        }
-                        if (currentLetter == letter[17])
-                        {
-                            wordWeight = wordWeight + weight[17];
-                        }
-                        if (currentLetter == letter[18])
-                        {
-                            wordWeight = wordWeight + weight[18];
-                        }
-                        if (currentLetter == letter[19])
-                        {
-                            wordWeight = wordWeight + weight[19];
-                        }
-                        if (currentLetter == letter[20])
-                        {
-                            wordWeight = wordWeight + weight[20];
-                        }
-                        if (currentLetter == letter[21])
-                        {
-                            wordWeight = wordWeight + weight[21];
-                        }
-                        if (currentLetter == letter[22])
-                        {
-                            wordWeight = wordWeight + weight[22];
-                        }
-                        if (currentLetter == letter[23])
-                        {
-                            wordWeight = wordWeight + weight[23];
-                        }
-                        if (currentLetter == letter[24])
-                        {
-                            wordWeight = wordWeight + weight[24];
-                        }
-                        if (currentLetter == letter[25])
-                        {
-                            wordWeight = wordWeight + weight[25];
-                        }
-                        if (currentLetter == letter[26])
-                        {
-                            wordWeight = wordWeight + weight[26];
+                        for (int frick = 0; frick < upletters.Length; frick++) {
+                            
+                            if (currentLetter == upletters[frick] || currentLetter == lowletters[frick]) {
+
+                                wordWeight = wordWeight + weights[frick];
+                                label3.Text = wordWeight.ToString();
+                                
+                            
+                            }
+                        
+                        
+                        
+                        
                         }
                     }
-                    testLabel.Text = wordWeight.ToString();
+        
                     attackButtonOn();
                     attackButtonOnOff = true;
                 }
