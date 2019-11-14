@@ -13,7 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Downloads\wordness.txt");
+        string[] words = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(@"wordness.txt"));
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
