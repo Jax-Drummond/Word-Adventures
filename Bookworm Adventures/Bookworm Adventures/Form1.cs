@@ -201,7 +201,7 @@ namespace Bookworm_Adventures
             //Check for a real word
             word = attackWord.Text;
             word = word.ToLower();
-            label3.Text = word;
+        //FOR COUNTING THE WEIGHT OF EACH WORD
             for (int i = 0; i < wordList.Count; i++)
             {
                 if (word == wordList[i])
