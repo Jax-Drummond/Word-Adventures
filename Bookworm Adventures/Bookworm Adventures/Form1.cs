@@ -13,13 +13,13 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\words.txt");
+        string[] words = System.IO.File.ReadAllLines(@"H:\Downloads\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-        string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P","R", "S", "T", "U", "V", "W", "X", "Y", "Z","QU" };
+        string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         double[] weights = new double[] { 1, 1.25, 1.25, 1, 1, 1.25, 1, 1.25, 1, 1.75, 1.75, 1, 1.25, 1, 1, 1.25, 1.75, 1, 1, 1, 1, 1.5, 1.5, 2, 1.5, 2 };
         List<string> wordList = new List<string>();
-    
+
         public Random random = new Random();
         public int rnd, turn = 1;
         public string currentLetter;
@@ -200,33 +200,26 @@ namespace Bookworm_Adventures
         {
             //Check for a real word
             word = attackWord.Text;
+            word = word.ToLower();
+            label3.Text = word;
             for (int i = 0; i < wordList.Count; i++)
             {
                 if (word == wordList[i])
                 {
-                    
-                    for (int k = 0; k < word.Length; k++)
-                    {
-                       
-                        currentLetter = word.Substring(k, 1);
-                        for (int frick = 0; frick < upletters.Length; frick++) {
-                            
-                            if (currentLetter == upletters[frick] || currentLetter == lowletters[frick]) {
-
-                                wordWeight = wordWeight + weights[frick];
-                                label3.Text = wordWeight.ToString();
-                                
-                            
-                            }
-                        
-                        
-                        
-                        
-                        }
-                    }
-        
                     attackButtonOn();
                     attackButtonOnOff = true;
+                    for (int k = 0; k < word.Length; k++)
+                    {
+                        currentLetter = word.Substring(k, 1);
+                        for (int frick = 0; frick < upletters.Length; frick++)
+                        {
+                            if (currentLetter == upletters[frick] || currentLetter == lowletters[frick])
+                            {
+                                wordWeight = wordWeight + weights[frick];
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
