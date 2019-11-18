@@ -13,18 +13,18 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
+        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         double[] weights = new double[] { 1, 1.25, 1.25, 1, 1, 1.25, 1, 1.25, 1, 1.75, 1.75, 1, 1.25, 1, 1, 1.25, 1.75, 1, 1, 1, 1, 1.5, 1.5, 2, 1.5, 2 };
         List<string> wordList = new List<string>();
-
+        public Button[] buttons = new Button[17] ;
         public Random random = new Random();
         public int rnd, turn = 1;
         public string currentLetter;
         public double p1Health = 20, p2Health = 20, wordWeight = 0, attackStrength;
-        public bool[] used = new bool[20];
+        public bool[] used = new bool[17];
         public bool[] amethyst = new bool[20];
         public bool[] emerald = new bool[20];
         public bool[] saphire = new bool[20];
@@ -41,6 +41,7 @@ namespace Bookworm_Adventures
             {
                 wordList.Add(words[i]);
             }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -65,92 +66,42 @@ namespace Bookworm_Adventures
             used[14] = true;
             used[15] = true;
             used[16] = true;
+            buttons[1] = button1;
+            buttons[2] = button2;
+            buttons[3] = button3;
+            buttons[4] = button4;
+            buttons[5] = button5;
+            buttons[6] = button6;
+            buttons[7] = button7;
+            buttons[8] = button8;
+            buttons[9] = button9;
+            buttons[10] = button10;
+            buttons[11] = button11;
+            buttons[12] = button12;
+            buttons[13] = button13;
+            buttons[14] = button14;
+            buttons[15] = button15;
+            buttons[16] = button16;
             Letter_Gen();
         }
 
         private void Letter_Gen()
-        {
-            //Generate letters only for tiles used last turn
-            if (used[1] == true)
-            {
-                rnd = random.Next(0, 26);
-                button1.Text = rndletters[rnd];
+        {//Generate letters only for tiles used last turn
+            for (int i = 1; i <= 16; i++) {
+                if (used[i] == true) {
+                    rnd = random.Next(0, 26);
+                    buttons[i].Text = rndletters[rnd];
+                
+                
+                }
+            
+            
+            
             }
-            if (used[2] == true)
-            {
-                rnd = random.Next(0, 26);
-                button2.Text = rndletters[rnd];
-            }
-            if (used[3] == true)
-            {
-                rnd = random.Next(0, 26);
-                button3.Text = rndletters[rnd];
-            }
-            if (used[4] == true)
-            {
-                rnd = random.Next(0, 26);
-                button4.Text = rndletters[rnd];
-            }
-            if (used[5] == true)
-            {
-                rnd = random.Next(0, 26);
-                button5.Text = rndletters[rnd];
-            }
-            if (used[6] == true)
-            {
-                rnd = random.Next(0, 26);
-                button6.Text = rndletters[rnd];
-            }
-            if (used[7] == true)
-            {
-                rnd = random.Next(0, 26);
-                button7.Text = rndletters[rnd];
-            }
-            if (used[8] == true)
-            {
-                rnd = random.Next(0, 26);
-                button8.Text = rndletters[rnd];
-            }
-            if (used[9] == true)
-            {
-                rnd = random.Next(0, 26);
-                button9.Text = rndletters[rnd];
-            }
-            if (used[10] == true)
-            {
-                rnd = random.Next(0, 26);
-                button10.Text = rndletters[rnd];
-            }
-            if (used[11] == true)
-            {
-                rnd = random.Next(0, 26);
-                button11.Text = rndletters[rnd];
-            }
-            if (used[12] == true)
-            {
-                rnd = random.Next(0, 26);
-                button12.Text = rndletters[rnd];
-            }
-            if (used[13] == true)
-            {
-                rnd = random.Next(0, 26);
-                button13.Text = rndletters[rnd];
-            }
-            if (used[14] == true)
-            {
-                rnd = random.Next(0, 26);
-                button14.Text = rndletters[rnd];
-            }
-            if (used[15] == true)
-            {
-                rnd = random.Next(0, 26);
-                button15.Text = rndletters[rnd];
-            }
-            if (used[16] == true)
-            {
-                rnd = random.Next(0, 26);
-                button16.Text = rndletters[rnd];
-            }
+           
+          
+            
+           
             wordReset();
         }
 
@@ -181,8 +132,6 @@ namespace Bookworm_Adventures
         private void attackButtonOff()
         {
             //Sets the attack button to off
-            wordWeight = 0;
-            attackButtonOnOff = false;
             attackButton.BackColor = Color.Maroon;
             attackButton.ForeColor = Color.Red;
         }
@@ -319,6 +268,8 @@ namespace Bookworm_Adventures
         private void attackButtonOn()
         {
             //Switch the attack button to on
+            wordWeight = 0;
+            attackButtonOnOff = false;
             attackButton.BackColor = Color.Lime;
             attackButton.ForeColor = Color.Black;
         }
