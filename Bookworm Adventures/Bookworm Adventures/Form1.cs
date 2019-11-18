@@ -447,461 +447,691 @@ namespace Bookworm_Adventures
             {
                 attackStrength = wordWeight;
                 //Amethyst calculations
-                if (used[1] == true && amethyst[1] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[2] == true && amethyst[2] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[3] == true && amethyst[3] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[4] == true && amethyst[4] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[5] == true && amethyst[5] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[6] == true && amethyst[6] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[7] == true && amethyst[7] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[8] == true && amethyst[8] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[9] == true && amethyst[9] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[10] == true && amethyst[10] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[11] == true && amethyst[11] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[12] == true && amethyst[12] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[13] == true && amethyst[13] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[14] == true && amethyst[14] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[15] == true && amethyst[15] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                if (used[16] == true && amethyst[16] == true)
-                {
-                    attackStrength = attackStrength * 1.15;
-                }
-                //Emerald calculations
-                if (used[1] == true && emerald[1] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[2] == true && emerald[2] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[3] == true && emerald[3] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[4] == true && emerald[4] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[5] == true && emerald[5] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[6] == true && emerald[6] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[7] == true && emerald[7] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[8] == true && emerald[8] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[9] == true && emerald[9] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[10] == true && emerald[10] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[11] == true && emerald[11] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[12] == true && emerald[12] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[13] == true && emerald[13] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[14] == true && emerald[14] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[15] == true && emerald[15] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                if (used[16] == true && emerald[16] == true)
-                {
-                    attackStrength = attackStrength * 1.20;
-                }
-                //Saphire calculations
-                if (used[1] == true && saphire[1] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[2] == true && saphire[2] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[3] == true && saphire[3] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[4] == true && saphire[4] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[5] == true && saphire[5] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[6] == true && saphire[6] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[7] == true && saphire[7] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[8] == true && saphire[8] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[9] == true && saphire[9] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[10] == true && saphire[10] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[11] == true && saphire[11] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[12] == true && saphire[12] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[13] == true && saphire[13] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[14] == true && saphire[14] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[15] == true && saphire[15] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                if (used[16] == true && saphire[16] == true)
-                {
-                    attackStrength = attackStrength * 1.25;
-                }
-                //Garnet calculations
-                if (used[1] == true && garnet[1] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[2] == true && garnet[2] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[3] == true && garnet[3] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[4] == true && garnet[4] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[5] == true && garnet[5] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[6] == true && garnet[6] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[7] == true && garnet[7] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[8] == true && garnet[8] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[9] == true && garnet[9] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[10] == true && garnet[10] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[11] == true && garnet[11] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[12] == true && garnet[12] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[13] == true && garnet[13] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[14] == true && garnet[14] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[15] == true && garnet[15] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                if (used[16] == true && garnet[16] == true)
-                {
-                    attackStrength = attackStrength * 1.30;
-                }
-                //Ruby calculations
-                if (used[1] == true && ruby[1] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[2] == true && ruby[2] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[3] == true && ruby[3] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[4] == true && ruby[4] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[5] == true && ruby[5] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[6] == true && ruby[6] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[7] == true && ruby[7] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[8] == true && ruby[8] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[9] == true && ruby[9] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[10] == true && ruby[10] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[11] == true && ruby[11] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[12] == true && ruby[12] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[13] == true && ruby[13] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[14] == true && ruby[14] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[15] == true && ruby[15] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                if (used[16] == true && ruby[16] == true)
-                {
-                    attackStrength = attackStrength * 1.35;
-                }
-                //Crystal calculations
-                if (used[1] == true && crystal[1] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[2] == true && crystal[2] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[3] == true && crystal[3] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[4] == true && crystal[4] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[5] == true && crystal[5] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[6] == true && crystal[6] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[7] == true && crystal[7] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[8] == true && crystal[8] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[9] == true && crystal[9] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[10] == true && crystal[10] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[11] == true && crystal[11] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[12] == true && crystal[12] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[13] == true && crystal[13] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[14] == true && crystal[14] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[15] == true && crystal[15] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                if (used[16] == true && crystal[16] == true)
-                {
-                    attackStrength = attackStrength * 1.50;
-                }
-                //Diamond calculations
-                if (used[1] == true && diamond[1] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[2] == true && diamond[2] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[3] == true && diamond[3] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[4] == true && diamond[4] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[5] == true && diamond[5] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[6] == true && diamond[6] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[7] == true && diamond[7] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[8] == true && diamond[8] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[9] == true && diamond[9] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[10] == true && diamond[10] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[11] == true && diamond[11] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[12] == true && diamond[12] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[13] == true && diamond[13] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[14] == true && diamond[14] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[15] == true && diamond[15] == true)
-                {
-                    attackStrength = attackStrength * 2;
-                }
-                if (used[16] == true && diamond[16] == true)
-                {
-                    attackStrength = attackStrength * 2;
+                if (attackStrength > 0)
+                {
+                    if (used[1] == true && amethyst[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && amethyst[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && amethyst[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && amethyst[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && amethyst[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && amethyst[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && amethyst[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && amethyst[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && amethyst[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && amethyst[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && amethyst[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && amethyst[12] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && amethyst[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && amethyst[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && amethyst[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && amethyst[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.15;
+                        amethyst[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Emerald calculations
+                    if (used[1] == true && emerald[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && emerald[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && emerald[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && emerald[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && emerald[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && emerald[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && emerald[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && emerald[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && emerald[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && emerald[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && emerald[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && emerald[12] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && emerald[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && emerald[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && emerald[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && emerald[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.20;
+                        emerald[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Saphire calculations
+                    if (used[1] == true && saphire[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && saphire[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && saphire[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && saphire[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && saphire[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && saphire[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && saphire[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && saphire[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && saphire[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && saphire[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && saphire[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && saphire[12] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && saphire[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && saphire[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && saphire[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && saphire[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.25;
+                        saphire[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Garnet calculations
+                    if (used[1] == true && garnet[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && garnet[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && garnet[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && garnet[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && garnet[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && garnet[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && garnet[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && garnet[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && garnet[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && garnet[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && garnet[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && garnet[12] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && garnet[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && garnet[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && garnet[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && garnet[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.30;
+                        garnet[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Ruby calculations
+                    if (used[1] == true && ruby[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && ruby[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && ruby[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && ruby[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && ruby[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && ruby[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && ruby[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && ruby[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && ruby[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && ruby[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && ruby[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && ruby[12] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && ruby[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && ruby[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && ruby[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && ruby[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.35;
+                        ruby[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Crystal calculations
+                    if (used[1] == true && crystal[1] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && crystal[2] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && crystal[3] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && crystal[4] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && crystal[5] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && crystal[6] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && crystal[7] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && crystal[8] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && crystal[9] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && crystal[10] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && crystal[11] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && crystal[12] == true)
+                    {
+
+                        attackStrength = attackStrength * 1.50;
+                        crystal[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && crystal[13] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && crystal[14] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && crystal[15] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && crystal[16] == true)
+                    {
+                        attackStrength = attackStrength * 1.50;
+                        crystal[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+                    }
+                    //Diamond calculations
+                    if (used[1] == true && diamond[1] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[1] = false;
+                        buttons[1].BackColor = Color.Transparent;
+                    }
+                    if (used[2] == true && diamond[2] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[2] = false;
+                        buttons[2].BackColor = Color.Transparent;
+                    }
+                    if (used[3] == true && diamond[3] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[3] = false;
+                        buttons[3].BackColor = Color.Transparent;
+                    }
+                    if (used[4] == true && diamond[4] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[4] = false;
+                        buttons[4].BackColor = Color.Transparent;
+                    }
+                    if (used[5] == true && diamond[5] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[5] = false;
+                        buttons[5].BackColor = Color.Transparent;
+                    }
+                    if (used[6] == true && diamond[6] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[6] = false;
+                        buttons[6].BackColor = Color.Transparent;
+                    }
+                    if (used[7] == true && diamond[7] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[7] = false;
+                        buttons[7].BackColor = Color.Transparent;
+                    }
+                    if (used[8] == true && diamond[8] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[8] = false;
+                        buttons[8].BackColor = Color.Transparent;
+                    }
+                    if (used[9] == true && diamond[9] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[9] = false;
+                        buttons[9].BackColor = Color.Transparent;
+                    }
+                    if (used[10] == true && diamond[10] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[10] = false;
+                        buttons[10].BackColor = Color.Transparent;
+                    }
+                    if (used[11] == true && diamond[11] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[11] = false;
+                        buttons[11].BackColor = Color.Transparent;
+                    }
+                    if (used[12] == true && diamond[12] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[12] = false;
+                        buttons[12].BackColor = Color.Transparent;
+                    }
+                    if (used[13] == true && diamond[13] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[13] = false;
+                        buttons[13].BackColor = Color.Transparent;
+                    }
+                    if (used[14] == true && diamond[14] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[14] = false;
+                        buttons[14].BackColor = Color.Transparent;
+                    }
+                    if (used[15] == true && diamond[15] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[15] = false;
+                        buttons[15].BackColor = Color.Transparent;
+                    }
+                    if (used[16] == true && diamond[16] == true)
+                    {
+                        attackStrength = attackStrength * 2;
+                        diamond[16] = false;
+                        buttons[16].BackColor = Color.Transparent;
+
+                    }
                 }
                 //Gem addition
+                if (attackStrength > 0) { 
                 if (word.Length == 5)
                 {
                     addGemAmethyst();
@@ -930,6 +1160,7 @@ namespace Bookworm_Adventures
                 {
                     addGemDiamond();
                 }
+            }
                 //Actual damage dealing
                 if (turn == 1)
                 {
