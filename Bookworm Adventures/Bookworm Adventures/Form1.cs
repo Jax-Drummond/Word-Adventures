@@ -181,6 +181,8 @@ namespace Bookworm_Adventures
         private void attackButtonOff()
         {
             //Sets the attack button to off
+            wordWeight = 0;
+            attackButtonOnOff = false;
             attackButton.BackColor = Color.Maroon;
             attackButton.ForeColor = Color.Red;
         }
