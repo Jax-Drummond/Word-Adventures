@@ -13,7 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(@"wordness.txt"));
+        string[] words = System.IO.File.ReadAllLines(@"H:\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -201,9 +201,13 @@ namespace Bookworm_Adventures
             //Check for a real word
             word = attackWord.Text;
             word = word.ToLower();
-        //FOR COUNTING THE WEIGHT OF EACH WORD
             for (int i = 0; i < wordList.Count; i++)
             {
+                if (word != wordList[i])
+                {
+                    attackButtonOff();
+                    attackButtonOnOff = true;
+                }
                 if (word == wordList[i])
                 {
                     attackButtonOn();
@@ -216,10 +220,10 @@ namespace Bookworm_Adventures
                             if (currentLetter == upletters[frick] || currentLetter == lowletters[frick])
                             {
                                 wordWeight = wordWeight + weights[frick];
+                                i = 7656119;
                             }
                         }
                     }
-                    
                 }
             }
         }
