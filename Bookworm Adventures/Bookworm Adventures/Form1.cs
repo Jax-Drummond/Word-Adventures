@@ -13,7 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
+        string[] words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -50,22 +50,10 @@ namespace Bookworm_Adventures
             label1.Text = p1Health.ToString();
             label2.Text = p2Health.ToString();
             attackWord.Text = "";
-            used[1] = true;
-            used[2] = true;
-            used[3] = true;
-            used[4] = true;
-            used[5] = true;
-            used[6] = true;
-            used[7] = true;
-            used[8] = true;
-            used[9] = true;
-            used[10] = true;
-            used[11] = true;
-            used[12] = true;
-            used[13] = true;
-            used[14] = true;
-            used[15] = true;
-            used[16] = true;
+            for (int i = 1; i <= 16; i++)
+            {
+                used[i] = true;
+            }
             buttons[1] = button1;
             buttons[2] = button2;
             buttons[3] = button3;
@@ -82,6 +70,7 @@ namespace Bookworm_Adventures
             buttons[14] = button14;
             buttons[15] = button15;
             buttons[16] = button16;
+          
             Letter_Gen();
         }
 
@@ -109,22 +98,10 @@ namespace Bookworm_Adventures
         {
             //Resets the word, used very often
             attackWord.Text = "";
-            used[1] = false;
-            used[2] = false;
-            used[3] = false;
-            used[4] = false;
-            used[5] = false;
-            used[6] = false;
-            used[7] = false;
-            used[8] = false;
-            used[9] = false;
-            used[10] = false;
-            used[11] = false;
-            used[12] = false;
-            used[13] = false;
-            used[14] = false;
-            used[15] = false;
-            used[16] = false;
+        for (int i=1; i <= 16; i++)
+            {
+                used[i] = false;
+            }
             wordWeight = 0;
             attackButtonOff();
         }
@@ -159,7 +136,7 @@ namespace Bookworm_Adventures
                     attackButtonOff();
                     attackButtonOnOff = true;
                 }
-                if (word == wordList[i])
+                if (word == wordList[i] && word.Length >2)
                 {
                     attackButtonOn();
                     attackButtonOnOff = true;
@@ -277,22 +254,10 @@ namespace Bookworm_Adventures
         private void scramble_Click(object sender, EventArgs e)
         {
             //Change all letters and change the turn
-            used[1] = true;
-            used[2] = true;
-            used[3] = true;
-            used[4] = true;
-            used[5] = true;
-            used[6] = true;
-            used[7] = true;
-            used[8] = true;
-            used[9] = true;
-            used[10] = true;
-            used[11] = true;
-            used[12] = true;
-            used[13] = true;
-            used[14] = true;
-            used[15] = true;
-            used[16] = true;
+            for (int i = 1; i <= 16; i++)
+            {
+                used[i] = true;
+            }
             Letter_Gen();
             if (turn == 1)
             {
