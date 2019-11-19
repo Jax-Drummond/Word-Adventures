@@ -13,13 +13,13 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt");
+        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         double[] weights = new double[] { 1, 1.25, 1.25, 1, 1, 1.25, 1, 1.25, 1, 1.75, 1.75, 1, 1.25, 1, 1, 1.25, 1.75, 1, 1, 1, 1, 1.5, 1.5, 2, 1.5, 2 };
         List<string> wordList = new List<string>();
-        public Button[] buttons = new Button[17] ;
+        public Button[] buttons = new Button[17];
         public Random random = new Random();
         public int rnd, turn = 1;
         public string currentLetter;
@@ -41,7 +41,7 @@ namespace Bookworm_Adventures
             {
                 wordList.Add(words[i]);
             }
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,27 +70,29 @@ namespace Bookworm_Adventures
             buttons[14] = button14;
             buttons[15] = button15;
             buttons[16] = button16;
-          
+
             Letter_Gen();
         }
 
         private void Letter_Gen()
         {//Generate letters only for tiles used last turn
-            for (int i = 1; i <= 16; i++) {
-                if (used[i] == true) {
+            for (int i = 1; i <= 16; i++)
+            {
+                if (used[i] == true)
+                {
                     rnd = random.Next(0, 26);
                     buttons[i].Text = rndletters[rnd];
-                
-                
+
+
                 }
-            
-            
-            
+
+
+
             }
-           
-          
-            
-           
+
+
+
+
             wordReset();
         }
 
@@ -98,7 +100,7 @@ namespace Bookworm_Adventures
         {
             //Resets the word, used very often
             attackWord.Text = "";
-        for (int i=1; i <= 16; i++)
+            for (int i = 1; i <= 16; i++)
             {
                 used[i] = false;
             }
@@ -134,21 +136,24 @@ namespace Bookworm_Adventures
                 if (word != wordList[i])
                 {
                     attackButtonOff();
-                    attackButtonOnOff = true;
+                    attackButtonOnOff = false;
                 }
-                if (word == wordList[i] && word.Length >2)
+                if (word == wordList[i] )
                 {
-                    attackButtonOn();
-                    attackButtonOnOff = true;
-                    for (int k = 0; k < word.Length; k++)
+                    if (word.Length > 2)
                     {
-                        currentLetter = word.Substring(k, 1);
-                        for (int frick = 0; frick < upletters.Length; frick++)
+                        attackButtonOn();
+                        attackButtonOnOff = true;
+                        for (int k = 0; k < word.Length; k++)
                         {
-                            if (currentLetter == upletters[frick] || currentLetter == lowletters[frick])
+                            currentLetter = word.Substring(k, 1);
+                            for (int frick = 0; frick < upletters.Length; frick++)
                             {
-                                wordWeight = wordWeight + weights[frick];
-                                i = 7656119;
+                                if (currentLetter == upletters[frick] || currentLetter == lowletters[frick])
+                                {
+                                    wordWeight = wordWeight + weights[frick];
+                                    i = 7656119;
+                                }
                             }
                         }
                     }
@@ -1131,36 +1136,37 @@ namespace Bookworm_Adventures
                     }
                 }
                 //Gem addition
-                if (attackStrength > 0) { 
-                if (word.Length == 5)
+                if (attackStrength > 0)
                 {
-                    addGemAmethyst();
+                    if (word.Length == 5)
+                    {
+                        addGemAmethyst();
+                    }
+                    if (word.Length == 6)
+                    {
+                        addGemEmerald();
+                    }
+                    if (word.Length == 7)
+                    {
+                        addGemSaphire();
+                    }
+                    if (word.Length == 8)
+                    {
+                        addGemGarnet();
+                    }
+                    if (word.Length == 9)
+                    {
+                        addGemRuby();
+                    }
+                    if (word.Length == 10)
+                    {
+                        addGemCrystal();
+                    }
+                    if (word.Length >= 11)
+                    {
+                        addGemDiamond();
+                    }
                 }
-                if (word.Length == 6)
-                {
-                    addGemEmerald();
-                }
-                if (word.Length == 7)
-                {
-                    addGemSaphire();
-                }
-                if (word.Length == 8)
-                {
-                    addGemGarnet();
-                }
-                if (word.Length == 9)
-                {
-                    addGemRuby();
-                }
-                if (word.Length == 10)
-                {
-                    addGemCrystal();
-                }
-                if (word.Length >= 11)
-                {
-                    addGemDiamond();
-                }
-            }
                 //Actual damage dealing
                 if (turn == 1)
                 {
