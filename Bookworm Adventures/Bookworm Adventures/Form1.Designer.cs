@@ -57,12 +57,13 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.addWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.turner = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -338,6 +339,11 @@ namespace Bookworm_Adventures
             this.reloadWordsToolStripMenuItem.Text = "ReloadWords";
             this.reloadWordsToolStripMenuItem.Click += new System.EventHandler(this.reloadWordsToolStripMenuItem_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 750;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // addWordToolStripMenuItem
             // 
             this.addWordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -359,11 +365,6 @@ namespace Bookworm_Adventures
             this.completeToolStripMenuItem1.Text = "Complete";
             this.completeToolStripMenuItem1.Click += new System.EventHandler(this.completeToolStripMenuItem1_Click);
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 750;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Bookworm_Adventures.Properties.Resources.mik_wazok;
@@ -373,6 +374,7 @@ namespace Bookworm_Adventures
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -385,11 +387,22 @@ namespace Bookworm_Adventures
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // turner
+            // 
+            this.turner.AutoSize = true;
+            this.turner.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turner.Location = new System.Drawing.Point(220, 124);
+            this.turner.Name = "turner";
+            this.turner.Size = new System.Drawing.Size(51, 39);
+            this.turner.TabIndex = 25;
+            this.turner.Text = "←";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 474);
+            this.Controls.Add(this.turner);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.scramble);
@@ -464,5 +477,6 @@ namespace Bookworm_Adventures
         private System.Windows.Forms.ToolStripMenuItem addWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem1;
+        private System.Windows.Forms.Label turner;
     }
 }
