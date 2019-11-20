@@ -179,10 +179,13 @@ namespace Bookworm_Adventures
             Letter_Gen();
             if (turn == 1)
             {
+                turner.Text = "→";
                 turn = 2;
+
             }
             else if (turn == 2)
             {
+                turner.Text = "←";
                 turn = 1;
             }
         }
@@ -453,6 +456,7 @@ namespace Bookworm_Adventures
                     pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
                     label2.Text = p2Health.ToString();
                     timer1.Enabled = true;
+                    turner.Text = "→";
                     turn = 2;
                 }
                 else if (turn == 2)
@@ -461,6 +465,7 @@ namespace Bookworm_Adventures
                     pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
                     label1.Text = p1Health.ToString();
                     timer1.Enabled = true;
+                    turner.Text = "←";
                     turn = 1;
                 }
                 Letter_Gen();
@@ -548,13 +553,20 @@ namespace Bookworm_Adventures
         {
             if (toolStripTextBox2.Text != "")
             {
-
-                wordList.Add(toolStripTextBox2.Text);
-                System.IO.File.WriteAllLines(path, wordList);
-                reloadWords();
-                wordUpdate();
-                toolStripTextBox2.Clear();
+                    
+                        wordList.Add(toolStripTextBox2.Text);
+                        System.IO.File.WriteAllLines(path, wordList);
+                        reloadWords();
+                        wordUpdate();
+                        toolStripTextBox2.Clear();
+                    
+                
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
