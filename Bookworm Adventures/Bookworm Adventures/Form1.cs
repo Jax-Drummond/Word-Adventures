@@ -13,7 +13,8 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt");
+        public static string path = @"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt";
+        string[] words = System.IO.File.ReadAllLines(path);
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -67,7 +68,7 @@ namespace Bookworm_Adventures
         public void reloadWords()
         {
 
-            List<string> words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt").ToList();
+            List<string> words = System.IO.File.ReadAllLines(path).ToList();
             wordList.Clear();
             for (int i = 0; i < words.Count(); i++)
             {
@@ -497,7 +498,7 @@ namespace Bookworm_Adventures
                     if (toolStripTextBox1.Text == wordList[i])
                     {
                         wordList.RemoveAt(i);
-                        System.IO.File.WriteAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt", wordList);
+                        System.IO.File.WriteAllLines(path, wordList);
                         reloadWords();
                         wordUpdate();
                         toolStripTextBox1.Clear();
