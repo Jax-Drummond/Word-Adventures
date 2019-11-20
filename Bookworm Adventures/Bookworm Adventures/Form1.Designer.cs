@@ -45,8 +45,6 @@ namespace Bookworm_Adventures
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.attackWord = new System.Windows.Forms.Label();
             this.attackButton = new System.Windows.Forms.Button();
             this.resetWord = new System.Windows.Forms.Button();
@@ -57,13 +55,19 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.addWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.turner = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.p2hp = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.p1hp = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -229,24 +233,6 @@ namespace Bookworm_Adventures
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "p1HP";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(450, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "p2HP";
-            // 
             // attackWord
             // 
             this.attackWord.AutoSize = true;
@@ -256,6 +242,7 @@ namespace Bookworm_Adventures
             this.attackWord.Size = new System.Drawing.Size(121, 25);
             this.attackWord.TabIndex = 18;
             this.attackWord.Text = "attackWord";
+            this.attackWord.Click += new System.EventHandler(this.attackWord_Click);
             // 
             // attackButton
             // 
@@ -317,11 +304,12 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1,
             this.completeToolStripMenuItem});
             this.deleteWordToolStripMenuItem.Name = "deleteWordToolStripMenuItem";
-            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteWordToolStripMenuItem.Text = "Delete Word";
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             // 
@@ -335,14 +323,9 @@ namespace Bookworm_Adventures
             // reloadWordsToolStripMenuItem
             // 
             this.reloadWordsToolStripMenuItem.Name = "reloadWordsToolStripMenuItem";
-            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reloadWordsToolStripMenuItem.Text = "ReloadWords";
             this.reloadWordsToolStripMenuItem.Click += new System.EventHandler(this.reloadWordsToolStripMenuItem_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 750;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // addWordToolStripMenuItem
             // 
@@ -350,11 +333,12 @@ namespace Bookworm_Adventures
             this.toolStripTextBox2,
             this.completeToolStripMenuItem1});
             this.addWordToolStripMenuItem.Name = "addWordToolStripMenuItem";
-            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addWordToolStripMenuItem.Text = "Add Word";
             // 
             // toolStripTextBox2
             // 
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
             // 
@@ -365,10 +349,14 @@ namespace Bookworm_Adventures
             this.completeToolStripMenuItem1.Text = "Complete";
             this.completeToolStripMenuItem1.Click += new System.EventHandler(this.completeToolStripMenuItem1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 750;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Bookworm_Adventures.Properties.Resources.mik_wazok;
-            this.pictureBox2.Location = new System.Drawing.Point(356, 97);
+            this.pictureBox2.Location = new System.Drawing.Point(354, 97);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(128, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,7 +366,6 @@ namespace Bookworm_Adventures
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Bookworm_Adventures.Properties.Resources.New_Piskel;
             this.pictureBox1.Location = new System.Drawing.Point(12, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
@@ -397,11 +384,86 @@ namespace Bookworm_Adventures
             this.turner.TabIndex = 25;
             this.turner.Text = "←";
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.p1hp,
+            this.rectangleShape2,
+            this.p2hp,
+            this.rectangleShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(496, 474);
+            this.shapeContainer1.TabIndex = 26;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // p2hp
+            // 
+            this.p2hp.BackColor = System.Drawing.SystemColors.WindowText;
+            this.p2hp.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.p2hp.FillColor = System.Drawing.Color.Red;
+            this.p2hp.FillGradientColor = System.Drawing.Color.Maroon;
+            this.p2hp.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.p2hp.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.p2hp.Location = new System.Drawing.Point(357, 66);
+            this.p2hp.Name = "p2hp";
+            this.p2hp.Size = new System.Drawing.Size(122, 26);
+            // 
+            // rectangleShape1
+            // 
+            this.rectangleShape1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rectangleShape1.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape1.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.rectangleShape1.BorderWidth = 2;
+            this.rectangleShape1.FillColor = System.Drawing.Color.Red;
+            this.rectangleShape1.FillGradientColor = System.Drawing.Color.Maroon;
+            this.rectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.rectangleShape1.Location = new System.Drawing.Point(356, 65);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(125, 29);
+            // 
+            // rectangleShape2
+            // 
+            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape2.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.rectangleShape2.BorderWidth = 2;
+            this.rectangleShape2.FillColor = System.Drawing.Color.Red;
+            this.rectangleShape2.FillGradientColor = System.Drawing.Color.Maroon;
+            this.rectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.rectangleShape2.Location = new System.Drawing.Point(14, 63);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(125, 29);
+            // 
+            // p1hp
+            // 
+            this.p1hp.BackColor = System.Drawing.SystemColors.WindowText;
+            this.p1hp.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.p1hp.FillColor = System.Drawing.Color.Red;
+            this.p1hp.FillGradientColor = System.Drawing.Color.Maroon;
+            this.p1hp.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.p1hp.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.p1hp.Location = new System.Drawing.Point(15, 64);
+            this.p1hp.Name = "p1hp";
+            this.p1hp.Size = new System.Drawing.Size(122, 26);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(172, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 474);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.turner);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -409,8 +471,6 @@ namespace Bookworm_Adventures
             this.Controls.Add(this.resetWord);
             this.Controls.Add(this.attackButton);
             this.Controls.Add(this.attackWord);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -428,6 +488,8 @@ namespace Bookworm_Adventures
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.shapeContainer1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -459,8 +521,6 @@ namespace Bookworm_Adventures
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label attackWord;
         private System.Windows.Forms.Button attackButton;
         private System.Windows.Forms.Button resetWord;
@@ -478,5 +538,11 @@ namespace Bookworm_Adventures
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem1;
         private System.Windows.Forms.Label turner;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape p2hp;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape p1hp;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape2;
+        private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
+        private System.Windows.Forms.Label label1;
     }
 }
