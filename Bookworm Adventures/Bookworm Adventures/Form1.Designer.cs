@@ -57,12 +57,12 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.addWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.completeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -316,7 +316,7 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1,
             this.completeToolStripMenuItem});
             this.deleteWordToolStripMenuItem.Name = "deleteWordToolStripMenuItem";
-            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.deleteWordToolStripMenuItem.Text = "Delete Word";
             // 
             // toolStripTextBox1
@@ -334,9 +334,30 @@ namespace Bookworm_Adventures
             // reloadWordsToolStripMenuItem
             // 
             this.reloadWordsToolStripMenuItem.Name = "reloadWordsToolStripMenuItem";
-            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.reloadWordsToolStripMenuItem.Text = "ReloadWords";
             this.reloadWordsToolStripMenuItem.Click += new System.EventHandler(this.reloadWordsToolStripMenuItem_Click);
+            // 
+            // addWordToolStripMenuItem
+            // 
+            this.addWordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox2,
+            this.completeToolStripMenuItem1});
+            this.addWordToolStripMenuItem.Name = "addWordToolStripMenuItem";
+            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.addWordToolStripMenuItem.Text = "Add Word";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
+            // 
+            // completeToolStripMenuItem1
+            // 
+            this.completeToolStripMenuItem1.Name = "completeToolStripMenuItem1";
+            this.completeToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.completeToolStripMenuItem1.Text = "Complete";
+            this.completeToolStripMenuItem1.Click += new System.EventHandler(this.completeToolStripMenuItem1_Click);
             // 
             // timer1
             // 
@@ -345,7 +366,7 @@ namespace Bookworm_Adventures
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Bookworm_Adventures.Properties.Resources.New_Piskel;
+            this.pictureBox2.Image = global::Bookworm_Adventures.Properties.Resources.mik_wazok;
             this.pictureBox2.Location = new System.Drawing.Point(356, 97);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(128, 128);
@@ -363,27 +384,6 @@ namespace Bookworm_Adventures
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // addWordToolStripMenuItem
-            // 
-            this.addWordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox2,
-            this.completeToolStripMenuItem1});
-            this.addWordToolStripMenuItem.Name = "addWordToolStripMenuItem";
-            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addWordToolStripMenuItem.Text = "Add Word";
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
-            // 
-            // completeToolStripMenuItem1
-            // 
-            this.completeToolStripMenuItem1.Name = "completeToolStripMenuItem1";
-            this.completeToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
-            this.completeToolStripMenuItem1.Text = "Complete";
-            this.completeToolStripMenuItem1.Click += new System.EventHandler(this.completeToolStripMenuItem1_Click);
             // 
             // Form1
             // 
