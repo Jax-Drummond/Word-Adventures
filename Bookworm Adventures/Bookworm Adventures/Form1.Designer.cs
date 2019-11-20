@@ -58,11 +58,14 @@ namespace Bookworm_Adventures
             this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.completeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -301,7 +304,8 @@ namespace Bookworm_Adventures
             // 
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteWordToolStripMenuItem,
-            this.reloadWordsToolStripMenuItem});
+            this.reloadWordsToolStripMenuItem,
+            this.addWordToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
             this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.debugToolStripMenuItem.Text = "Debug";
@@ -312,7 +316,7 @@ namespace Bookworm_Adventures
             this.toolStripTextBox1,
             this.completeToolStripMenuItem});
             this.deleteWordToolStripMenuItem.Name = "deleteWordToolStripMenuItem";
-            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.deleteWordToolStripMenuItem.Text = "Delete Word";
             // 
             // toolStripTextBox1
@@ -330,7 +334,7 @@ namespace Bookworm_Adventures
             // reloadWordsToolStripMenuItem
             // 
             this.reloadWordsToolStripMenuItem.Name = "reloadWordsToolStripMenuItem";
-            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reloadWordsToolStripMenuItem.Text = "ReloadWords";
             this.reloadWordsToolStripMenuItem.Click += new System.EventHandler(this.reloadWordsToolStripMenuItem_Click);
             // 
@@ -338,16 +342,6 @@ namespace Bookworm_Adventures
             // 
             this.timer1.Interval = 750;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Bookworm_Adventures.Properties.Resources.New_Piskel;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -358,6 +352,38 @@ namespace Bookworm_Adventures
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Bookworm_Adventures.Properties.Resources.New_Piskel;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 97);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // addWordToolStripMenuItem
+            // 
+            this.addWordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox2,
+            this.completeToolStripMenuItem1});
+            this.addWordToolStripMenuItem.Name = "addWordToolStripMenuItem";
+            this.addWordToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addWordToolStripMenuItem.Text = "Add Word";
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
+            // 
+            // completeToolStripMenuItem1
+            // 
+            this.completeToolStripMenuItem1.Name = "completeToolStripMenuItem1";
+            this.completeToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.completeToolStripMenuItem1.Text = "Complete";
+            this.completeToolStripMenuItem1.Click += new System.EventHandler(this.completeToolStripMenuItem1_Click);
             // 
             // Form1
             // 
@@ -395,8 +421,8 @@ namespace Bookworm_Adventures
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +461,8 @@ namespace Bookworm_Adventures
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem addWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem1;
     }
 }
-
