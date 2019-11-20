@@ -13,6 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
+         
         public static string path = @"wordness.txt";
         string[] words = System.IO.File.ReadAllLines(path);
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
@@ -28,17 +29,22 @@ namespace Bookworm_Adventures
         public bool[] used = new bool[17];
         public string word;
         public bool attackButtonOnOff = false;
+          
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //Setting up things
             reloadWords();
-            label1.Text = p1Health.ToString();
-            label2.Text = p2Health.ToString();
+
+            // label1.Text = p1Health.ToString();
+            //label2.Text = p2Health.ToString();
+            pictureBox1.Image = Image.FromFile(@"New Piskel.png");
+            pictureBox2.Image = Image.FromFile(@"mik wazok.png");
             attackWord.Text = "";
             for (int i = 1; i <= 16; i++)
             {
@@ -450,23 +456,56 @@ namespace Bookworm_Adventures
                     }
                 }
                 //Actual damage dealing
-                if (turn == 1)
-                {
-                    p2Health = p2Health - attackStrength;
-                    pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
-                    label2.Text = p2Health.ToString();
+                
+                    if (turn == 1)
+                    {
+                        p2Health = p2Health - attackStrength;
+
+                        p2hp.Width = Convert.ToInt32(122 * (p2Health / 20));
+                        pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
+                    //label2.Text = ((p2Health / 20) * 100).ToString()+"%" ;
+                        timer1.Enabled = true;
+                    attackButtonOnOff = false;
+                        turner.Text = "→";
+                        turn = 2;
+                    }
+                    else if (turn == 2)
+                    {
+                        p1Health = p1Health - attackStrength;
+                        p1hp.Width = Convert.ToInt32(122 * (p1Health / 20));
+                        pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
+                        //label1.Text = ((p1Health / 20) * 100).ToString() + "%";
                     timer1.Enabled = true;
-                    turner.Text = "→";
-                    turn = 2;
-                }
-                else if (turn == 2)
-                {
-                    p1Health = p1Health - attackStrength;
-                    pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
-                    label1.Text = p1Health.ToString();
-                    timer1.Enabled = true;
+                    attackButtonOnOff = false;
                     turner.Text = "←";
-                    turn = 1;
+                        turn = 1;
+                    }
+                
+                    if(p2Health <= 0)
+                {
+                    p2Health = 0;
+                    label1.Visible = true;
+                    turner.Visible = false;
+                    label1.Text = "PLAYER ONE WINS!";
+                    for(int sans =1; sans< buttons.Count(); sans++)
+                    {
+                        buttons[sans].Enabled = false;
+                    }
+                    scramble.Enabled = false;
+                    resetWord.Enabled = false;
+                }
+                if (p1Health <= 0)
+                {
+                    p1Health = 0;
+                    label1.Visible = true;
+                    turner.Visible = false;
+                    label1.Text = "PLAYER TWO WINS!";
+                    for (int sans = 1; sans < buttons.Count(); sans++)
+                    {
+                        buttons[sans].Enabled = false;
+                    }
+                    scramble.Enabled = false;
+                    resetWord.Enabled = false;
                 }
                 Letter_Gen();
             }
@@ -535,6 +574,11 @@ namespace Bookworm_Adventures
             //Add emerald gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Lime;
+        }
+
+        private void attackWord_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
