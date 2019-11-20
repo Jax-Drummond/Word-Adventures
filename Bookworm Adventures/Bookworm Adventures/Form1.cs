@@ -450,7 +450,7 @@ namespace Bookworm_Adventures
                 if (turn == 1)
                 {
                     p2Health = p2Health - attackStrength;
-                    pictureBox2.Image = Image.FromFile(@"New Piskel.gif");
+                    pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
                     label2.Text = p2Health.ToString();
                     timer1.Enabled = true;
                     turn = 2;
@@ -535,7 +535,7 @@ namespace Bookworm_Adventures
         private void timer1_Tick(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile(@"New Piskel.png");
-            pictureBox2.Image = Image.FromFile(@"New Piskel.png");
+            pictureBox2.Image = Image.FromFile(@"mik wazok.png");
             timer1.Enabled = false;
         }
 
@@ -548,14 +548,12 @@ namespace Bookworm_Adventures
         {
             if (toolStripTextBox2.Text != "")
             {
-                    
-                        wordList.Add(toolStripTextBox2.Text);
-                        System.IO.File.WriteAllLines(path, wordList);
-                        reloadWords();
-                        wordUpdate();
-                        toolStripTextBox2.Clear();
-                    
-                
+
+                wordList.Add(toolStripTextBox2.Text);
+                System.IO.File.WriteAllLines(path, wordList);
+                reloadWords();
+                wordUpdate();
+                toolStripTextBox2.Clear();
             }
         }
     }
