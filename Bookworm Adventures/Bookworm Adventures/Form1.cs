@@ -13,7 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        public static string path = @"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt";
+        public static string path = @"wordness.txt";
         string[] words = System.IO.File.ReadAllLines(path);
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
@@ -31,8 +31,6 @@ namespace Bookworm_Adventures
         public Form1()
         {
             InitializeComponent();
-           
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -65,6 +63,7 @@ namespace Bookworm_Adventures
 
             Letter_Gen();
         }
+
         public void reloadWords()
         {
 
@@ -73,12 +72,9 @@ namespace Bookworm_Adventures
             for (int i = 0; i < words.Count(); i++)
             {
                 wordList.Add(words[i]);
-
-
-
-
             }
         }
+
         private void Letter_Gen()
         {//Generate letters only for tiles used last turn
             for (int i = 1; i <= 16; i++)
@@ -87,17 +83,8 @@ namespace Bookworm_Adventures
                 {
                     rnd = random.Next(0, 26);
                     buttons[i].Text = rndletters[rnd];
-
-
                 }
-
-
-
             }
-
-
-
-
             wordReset();
         }
 
@@ -143,7 +130,7 @@ namespace Bookworm_Adventures
                     attackButtonOff();
                     attackButtonOnOff = false;
                 }
-                if (word == wordList[i] )
+                if (word == wordList[i])
                 {
                     if (word.Length > 2)
                     {
@@ -377,28 +364,30 @@ namespace Bookworm_Adventures
             if (attackButtonOnOff == true)
             {
                 attackStrength = wordWeight;
-               
+
                 if (attackStrength > 0)
                 {
-                   for(int i = 0; i <= 16; i++)
+                    for (int i = 0; i <= 16; i++)
                     {    //Amethyst calculations
-                        if (used[i] && buttons[i].BackColor == Color.Purple) {
+                        if (used[i] && buttons[i].BackColor == Color.Purple)
+                        {
                             attackStrength = attackStrength * 1.15;
                             buttons[i].BackColor = Color.Transparent;
                         }
                         //Emerald Calculations
-                        if (used[i] && buttons[i].BackColor == Color.Lime) {
+                        if (used[i] && buttons[i].BackColor == Color.Lime)
+                        {
                             attackStrength = attackStrength * 1.20;
                             buttons[i].BackColor = Color.Transparent;
                         }
                         //Sapphire Calculations
-                        if(used[i] && buttons[i].BackColor == Color.Blue)
+                        if (used[i] && buttons[i].BackColor == Color.Blue)
                         {
                             attackStrength = attackStrength * 1.25;
                             buttons[i].BackColor = Color.Transparent;
                         }
                         //Garnet Calculations
-                        if(used[i] && buttons[i].BackColor == Color.Orange)
+                        if (used[i] && buttons[i].BackColor == Color.Orange)
                         {
                             attackStrength = attackStrength * 1.30;
                             buttons[i].BackColor = Color.Transparent;
@@ -461,13 +450,17 @@ namespace Bookworm_Adventures
                 if (turn == 1)
                 {
                     p2Health = p2Health - attackStrength;
+                    pictureBox2.Image = Image.FromFile(@"New Piskel.gif");
                     label2.Text = p2Health.ToString();
+                    timer1.Enabled = true;
                     turn = 2;
                 }
                 else if (turn == 2)
                 {
                     p1Health = p1Health - attackStrength;
+                    pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
                     label1.Text = p1Health.ToString();
+                    timer1.Enabled = true;
                     turn = 1;
                 }
                 Letter_Gen();
@@ -494,7 +487,6 @@ namespace Bookworm_Adventures
             {
                 for (int i = 0; i < wordList.Count(); i++)
                 {
-
                     if (toolStripTextBox1.Text == wordList[i])
                     {
                         wordList.RemoveAt(i);
@@ -502,8 +494,6 @@ namespace Bookworm_Adventures
                         reloadWords();
                         wordUpdate();
                         toolStripTextBox1.Clear();
-
-
                     }
                 }
             }
@@ -540,6 +530,13 @@ namespace Bookworm_Adventures
             //Add emerald gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Lime;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(@"New Piskel.png");
+            pictureBox2.Image = Image.FromFile(@"New Piskel.png");
+            timer1.Enabled = false;
         }
     }
 }
