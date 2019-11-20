@@ -16,3 +16,12 @@ H:\Bookworm Adventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.csprojR
 H:\Bookworm Adventures\Bookworm Adventures\obj\Debug\Bookworm_Adventures.Form1.resources
 H:\Bookworm Adventures\Bookworm Adventures\obj\Debug\Bookworm_Adventures.Properties.Resources.resources
 H:\Bookworm Adventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.csproj.GenerateResource.Cache
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\Bookworm Adventures.exe.config
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\Bookworm Adventures.exe
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\Bookworm Adventures.pdb
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.csprojAssemblyReference.cache
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm_Adventures.Form1.resources
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm_Adventures.Properties.Resources.resources
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.csproj.GenerateResource.cache
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.exe
+C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\obj\Debug\Bookworm Adventures.pdb

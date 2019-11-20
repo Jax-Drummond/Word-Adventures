@@ -13,7 +13,7 @@ namespace Bookworm_Adventures
     public partial class Form1 : Form
     {
         //Variables and stuff
-        string[] words = System.IO.File.ReadAllLines(@"H:\Profile\Desktop\Bookworm Adventures\Bookworm Adventures\bin\Debug\wordness.txt");
+        string[] words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt");
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -25,28 +25,19 @@ namespace Bookworm_Adventures
         public string currentLetter;
         public double p1Health = 20, p2Health = 20, wordWeight = 0, attackStrength;
         public bool[] used = new bool[17];
-        public bool[] amethyst = new bool[20];
-        public bool[] emerald = new bool[20];
-        public bool[] saphire = new bool[20];
-        public bool[] garnet = new bool[20];
-        public bool[] ruby = new bool[20];
-        public bool[] crystal = new bool[20];
-        public bool[] diamond = new bool[20];
         public string word;
         public bool attackButtonOnOff = false;
         public Form1()
         {
             InitializeComponent();
-            for (int i = 0; i < words.Length; i++)
-            {
-                wordList.Add(words[i]);
-            }
+           
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //Setting up things
+            reloadWords();
             label1.Text = p1Health.ToString();
             label2.Text = p2Health.ToString();
             attackWord.Text = "";
@@ -73,7 +64,20 @@ namespace Bookworm_Adventures
 
             Letter_Gen();
         }
+        public void reloadWords()
+        {
 
+            List<string> words = System.IO.File.ReadAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt").ToList();
+            wordList.Clear();
+            for (int i = 0; i < words.Count(); i++)
+            {
+                wordList.Add(words[i]);
+
+
+
+
+            }
+        }
         private void Letter_Gen()
         {//Generate letters only for tiles used last turn
             for (int i = 1; i <= 16; i++)
@@ -372,7 +376,7 @@ namespace Bookworm_Adventures
             if (attackButtonOnOff == true)
             {
                 attackStrength = wordWeight;
-                //Amethyst calculations
+               
                 if (attackStrength > 0)
                 {
                    for(int i = 0; i <= 16; i++)
@@ -480,14 +484,40 @@ namespace Bookworm_Adventures
         {
             //Add crystal gem to a random tile
             rnd = random.Next(1, 17);
-             buttons[rnd].BackColor = Color.Pink;
+            buttons[rnd].BackColor = Color.Pink;
+        }
+
+        private void completeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (toolStripTextBox1.Text != "")
+            {
+                for (int i = 0; i < wordList.Count(); i++)
+                {
+
+                    if (toolStripTextBox1.Text == wordList[i])
+                    {
+                        wordList.RemoveAt(i);
+                        System.IO.File.WriteAllLines(@"C:\Users\jaxdr\Desktop\Master\BookWormAdventures\Bookworm Adventures\bin\Debug\wordness.txt", wordList);
+                        reloadWords();
+                        wordUpdate();
+                        toolStripTextBox1.Clear();
+
+
+                    }
+                }
+            }
+        }
+
+        private void reloadWordsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reloadWords();
         }
 
         private void addGemRuby()
         {
             //Add ruby gem to a random tile
             rnd = random.Next(1, 17);
-           buttons[rnd].BackColor = Color.Red;
+            buttons[rnd].BackColor = Color.Red;
         }
 
         private void addGemGarnet()
@@ -508,7 +538,7 @@ namespace Bookworm_Adventures
         {
             //Add emerald gem to a random tile
             rnd = random.Next(1, 17);
-          buttons[rnd].BackColor = Color.Lime;
+            buttons[rnd].BackColor = Color.Lime;
         }
     }
 }

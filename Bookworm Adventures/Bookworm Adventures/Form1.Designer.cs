@@ -50,7 +50,13 @@
             this.attackButton = new System.Windows.Forms.Button();
             this.resetWord = new System.Windows.Forms.Button();
             this.scramble = new System.Windows.Forms.Button();
-            this.testLabel = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.completeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadWordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -275,21 +281,59 @@
             this.scramble.UseVisualStyleBackColor = false;
             this.scramble.Click += new System.EventHandler(this.scramble_Click);
             // 
-            // testLabel
+            // menuStrip1
             // 
-            this.testLabel.AutoSize = true;
-            this.testLabel.Location = new System.Drawing.Point(71, 348);
-            this.testLabel.Name = "testLabel";
-            this.testLabel.Size = new System.Drawing.Size(24, 13);
-            this.testLabel.TabIndex = 22;
-            this.testLabel.Text = "test";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.debugToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(496, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteWordToolStripMenuItem,
+            this.reloadWordsToolStripMenuItem});
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // deleteWordToolStripMenuItem
+            // 
+            this.deleteWordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.completeToolStripMenuItem});
+            this.deleteWordToolStripMenuItem.Name = "deleteWordToolStripMenuItem";
+            this.deleteWordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteWordToolStripMenuItem.Text = "Delete Word";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            // 
+            // completeToolStripMenuItem
+            // 
+            this.completeToolStripMenuItem.Name = "completeToolStripMenuItem";
+            this.completeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.completeToolStripMenuItem.Text = "Complete";
+            this.completeToolStripMenuItem.Click += new System.EventHandler(this.completeToolStripMenuItem_Click);
+            // 
+            // reloadWordsToolStripMenuItem
+            // 
+            this.reloadWordsToolStripMenuItem.Name = "reloadWordsToolStripMenuItem";
+            this.reloadWordsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reloadWordsToolStripMenuItem.Text = "ReloadWords";
+            this.reloadWordsToolStripMenuItem.Click += new System.EventHandler(this.reloadWordsToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 474);
-            this.Controls.Add(this.testLabel);
             this.Controls.Add(this.scramble);
             this.Controls.Add(this.resetWord);
             this.Controls.Add(this.attackButton);
@@ -312,9 +356,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,7 +392,12 @@
         private System.Windows.Forms.Button attackButton;
         private System.Windows.Forms.Button resetWord;
         private System.Windows.Forms.Button scramble;
-        private System.Windows.Forms.Label testLabel;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem completeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadWordsToolStripMenuItem;
     }
 }
 
