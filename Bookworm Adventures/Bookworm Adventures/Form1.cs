@@ -538,5 +538,25 @@ namespace Bookworm_Adventures
             pictureBox2.Image = Image.FromFile(@"New Piskel.png");
             timer1.Enabled = false;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void completeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (toolStripTextBox2.Text != "")
+            {
+                    
+                        wordList.Add(toolStripTextBox2.Text);
+                        System.IO.File.WriteAllLines(path, wordList);
+                        reloadWords();
+                        wordUpdate();
+                        toolStripTextBox2.Clear();
+                    
+                
+            }
+        }
     }
 }
