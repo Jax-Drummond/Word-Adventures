@@ -40,7 +40,7 @@ namespace Bookworm_Adventures
         {
             //Setting up things
             reloadWords();
-
+            wordsToolStripMenuItem.Text = "# of Words: "+wordList.Count().ToString();
             // label1.Text = p1Health.ToString();
             //label2.Text = p2Health.ToString();
             pictureBox1.Image = Image.FromFile(@"New Piskel.png");
@@ -382,12 +382,22 @@ namespace Bookworm_Adventures
                         {
                             attackStrength = attackStrength * 1.15;
                             buttons[i].BackColor = Color.Transparent;
+                            
                         }
                         //Emerald Calculations
                         if (used[i] && buttons[i].BackColor == Color.Lime)
                         {
                             attackStrength = attackStrength * 1.20;
                             buttons[i].BackColor = Color.Transparent;
+                            if (turn == 1) {
+                                p1Health = p1Health + 2;
+                             
+                            }
+                            if (turn == 2)
+                            {
+                                p2Health = p2Health + 2;
+                               
+                            }
                         }
                         //Sapphire Calculations
                         if (used[i] && buttons[i].BackColor == Color.Blue)
@@ -459,11 +469,13 @@ namespace Bookworm_Adventures
                 
                     if (turn == 1)
                     {
+                        
+                        
                         p2Health = p2Health - attackStrength;
-
                         p2hp.Width = Convert.ToInt32(122 * (p2Health / 20));
                         pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
                     //label2.Text = ((p2Health / 20) * 100).ToString()+"%" ;
+                        
                         timer1.Enabled = true;
                     attackButtonOnOff = false;
                         turner.Text = "→";
@@ -471,10 +483,12 @@ namespace Bookworm_Adventures
                     }
                     else if (turn == 2)
                     {
+                       
                         p1Health = p1Health - attackStrength;
                         p1hp.Width = Convert.ToInt32(122 * (p1Health / 20));
                         pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
                         //label1.Text = ((p1Health / 20) * 100).ToString() + "%";
+                        
                     timer1.Enabled = true;
                     attackButtonOnOff = false;
                     turner.Text = "←";
