@@ -40,7 +40,6 @@ namespace Bookworm_Adventures
         {
             //Setting up things
             reloadWords();
-            wordsToolStripMenuItem.Text = "# of Words: "+wordList.Count().ToString();
             // label1.Text = p1Health.ToString();
             //label2.Text = p2Health.ToString();
             pictureBox1.Image = Image.FromFile(@"New Piskel.png");
@@ -382,6 +381,7 @@ namespace Bookworm_Adventures
                         {
                             attackStrength = attackStrength * 1.15;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                             
                         }
                         //Emerald Calculations
@@ -389,14 +389,15 @@ namespace Bookworm_Adventures
                         {
                             attackStrength = attackStrength * 1.20;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                             if (turn == 1) {
                                 p1Health = p1Health + 2;
-                             
+                                p1hp.Width = Convert.ToInt32(122 * (p1Health / 20));
                             }
                             if (turn == 2)
                             {
                                 p2Health = p2Health + 2;
-                               
+                                p2hp.Width = Convert.ToInt32(122 * (p2Health / 20));
                             }
                         }
                         //Sapphire Calculations
@@ -404,30 +405,35 @@ namespace Bookworm_Adventures
                         {
                             attackStrength = attackStrength * 1.25;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                         }
                         //Garnet Calculations
                         if (used[i] && buttons[i].BackColor == Color.Orange)
                         {
                             attackStrength = attackStrength * 1.30;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                         }
                         //Ruby Calculations
                         if (used[i] && buttons[i].BackColor == Color.Red)
                         {
                             attackStrength = attackStrength * 1.35;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                         }
                         //Crystal Calculations
                         if (used[i] && buttons[i].BackColor == Color.Pink)
                         {
                             attackStrength = attackStrength * 1.50;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                         }
                         //Diamond Calculations
                         if (used[i] && buttons[i].BackColor == Color.Cyan)
                         {
                             attackStrength = attackStrength * 2;
                             buttons[i].BackColor = Color.Transparent;
+                            buttons[i].ForeColor = Color.Black;
                         }
 
 
@@ -529,7 +535,9 @@ namespace Bookworm_Adventures
         {
             //Add diamond gem to a random tile
             rnd = random.Next(1, 17);
+
             buttons[rnd].BackColor = Color.Cyan;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void addGemCrystal()
@@ -537,6 +545,7 @@ namespace Bookworm_Adventures
             //Add crystal gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Pink;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void completeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -567,6 +576,7 @@ namespace Bookworm_Adventures
             //Add ruby gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Red;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void addGemGarnet()
@@ -574,6 +584,7 @@ namespace Bookworm_Adventures
             //Add garnet gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Orange;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void addGemSaphire()
@@ -581,6 +592,7 @@ namespace Bookworm_Adventures
             //Add saphire gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Blue;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void addGemEmerald()
@@ -588,6 +600,7 @@ namespace Bookworm_Adventures
             //Add emerald gem to a random tile
             rnd = random.Next(1, 17);
             buttons[rnd].BackColor = Color.Lime;
+            buttons[rnd].ForeColor = Color.White;
         }
 
         private void attackWord_Click(object sender, EventArgs e)
