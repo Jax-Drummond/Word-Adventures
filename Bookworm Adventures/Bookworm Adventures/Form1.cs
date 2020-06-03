@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,19 @@ using System.Windows.Forms;
 
 namespace Bookworm_Adventures
 {
+    
     public partial class Form1 : Form
     {
         //Variables and stuff
-         
-        public static string path = @"wordness.txt";
-        string[] words = System.IO.File.ReadAllLines(path);
+   
+        public static string wordlists = Properties.Resources.wordness;
+        
+        Image mikeWazok = Properties.Resources.mik_wazok;
+        Image mikeWazokOof = Properties.Resources.mik_wazok_oof;
+        Image sans = Properties.Resources.New_Piskel1;
+        Image sansOof = Properties.Resources.New_Piskel;
+        
+        string[] words = wordlists.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
         string[] upletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         string[] rndletters = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "QU" };
         string[] lowletters = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
@@ -42,8 +50,8 @@ namespace Bookworm_Adventures
             reloadWords();
             // label1.Text = p1Health.ToString();
             //label2.Text = p2Health.ToString();
-            pictureBox1.Image = Image.FromFile(@"New Piskel.png");
-            pictureBox2.Image = Image.FromFile(@"mik wazok.png");
+            pictureBox1.Image = sans;
+            pictureBox2.Image = mikeWazok;
             attackWord.Text = "";
             for (int i = 1; i <= 16; i++)
             {
@@ -72,7 +80,7 @@ namespace Bookworm_Adventures
         public void reloadWords()
         {
 
-            List<string> words = System.IO.File.ReadAllLines(path).ToList();
+            List<string> words = wordlists.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).ToList();
             wordList.Clear();
             for (int i = 0; i < words.Count(); i++)
             {
@@ -479,7 +487,7 @@ namespace Bookworm_Adventures
                         
                         p2Health = p2Health - attackStrength;
                         p2hp.Width = Convert.ToInt32(122 * (p2Health / 20));
-                        pictureBox2.Image = Image.FromFile(@"mik wazok oof.gif");
+                        pictureBox2.Image = mikeWazokOof;
                     //label2.Text = ((p2Health / 20) * 100).ToString()+"%" ;
                         
                         timer1.Enabled = true;
@@ -492,7 +500,7 @@ namespace Bookworm_Adventures
                        
                         p1Health = p1Health - attackStrength;
                         p1hp.Width = Convert.ToInt32(122 * (p1Health / 20));
-                        pictureBox1.Image = Image.FromFile(@"New Piskel.gif");
+                        pictureBox1.Image = sansOof;
                         //label1.Text = ((p1Health / 20) * 100).ToString() + "%";
                         
                     timer1.Enabled = true;
@@ -557,7 +565,8 @@ namespace Bookworm_Adventures
                     if (toolStripTextBox1.Text == wordList[i])
                     {
                         wordList.RemoveAt(i);
-                        System.IO.File.WriteAllLines(path, wordList);
+                       
+                        System.IO.File.WriteAllLines(Properties.Resources.wordness, wordList);
                         reloadWords();
                         wordUpdate();
                         toolStripTextBox1.Clear();
@@ -610,8 +619,8 @@ namespace Bookworm_Adventures
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"New Piskel.png");
-            pictureBox2.Image = Image.FromFile(@"mik wazok.png");
+            pictureBox1.Image = sans;
+            pictureBox2.Image = mikeWazok;
             timer1.Enabled = false;
         }
 
@@ -626,7 +635,7 @@ namespace Bookworm_Adventures
             {
                     
                         wordList.Add(toolStripTextBox2.Text);
-                        System.IO.File.WriteAllLines(path, wordList);
+                       System.IO.File.WriteAllLines(Properties.Resources.wordness, wordList);
                         reloadWords();
                         wordUpdate();
                         toolStripTextBox2.Clear();

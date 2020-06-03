@@ -29,6 +29,7 @@ namespace Bookworm_Adventures
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -63,10 +64,10 @@ namespace Bookworm_Adventures
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.turner = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.p1hp = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.p2hp = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
-            this.p1hp = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -280,6 +281,7 @@ namespace Bookworm_Adventures
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Enabled = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.debugToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -287,6 +289,7 @@ namespace Bookworm_Adventures
             this.menuStrip1.Size = new System.Drawing.Size(496, 24);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // debugToolStripMenuItem
             // 
@@ -398,6 +401,31 @@ namespace Bookworm_Adventures
             this.shapeContainer1.TabIndex = 26;
             this.shapeContainer1.TabStop = false;
             // 
+            // p1hp
+            // 
+            this.p1hp.BackColor = System.Drawing.SystemColors.WindowText;
+            this.p1hp.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.p1hp.FillColor = System.Drawing.Color.Red;
+            this.p1hp.FillGradientColor = System.Drawing.Color.Maroon;
+            this.p1hp.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.p1hp.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
+            this.p1hp.Location = new System.Drawing.Point(15, 64);
+            this.p1hp.Name = "p1hp";
+            this.p1hp.Size = new System.Drawing.Size(122, 26);
+            // 
+            // rectangleShape2
+            // 
+            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
+            this.rectangleShape2.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.rectangleShape2.BorderWidth = 2;
+            this.rectangleShape2.FillColor = System.Drawing.Color.Red;
+            this.rectangleShape2.FillGradientColor = System.Drawing.Color.Maroon;
+            this.rectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
+            this.rectangleShape2.Location = new System.Drawing.Point(14, 63);
+            this.rectangleShape2.Name = "rectangleShape2";
+            this.rectangleShape2.Size = new System.Drawing.Size(125, 29);
+            // 
             // p2hp
             // 
             this.p2hp.BackColor = System.Drawing.SystemColors.WindowText;
@@ -422,31 +450,6 @@ namespace Bookworm_Adventures
             this.rectangleShape1.Location = new System.Drawing.Point(356, 65);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(125, 29);
-            // 
-            // rectangleShape2
-            // 
-            this.rectangleShape2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rectangleShape2.BackStyle = Microsoft.VisualBasic.PowerPacks.BackStyle.Opaque;
-            this.rectangleShape2.BorderColor = System.Drawing.SystemColors.WindowText;
-            this.rectangleShape2.BorderWidth = 2;
-            this.rectangleShape2.FillColor = System.Drawing.Color.Red;
-            this.rectangleShape2.FillGradientColor = System.Drawing.Color.Maroon;
-            this.rectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
-            this.rectangleShape2.Location = new System.Drawing.Point(14, 63);
-            this.rectangleShape2.Name = "rectangleShape2";
-            this.rectangleShape2.Size = new System.Drawing.Size(125, 29);
-            // 
-            // p1hp
-            // 
-            this.p1hp.BackColor = System.Drawing.SystemColors.WindowText;
-            this.p1hp.BorderColor = System.Drawing.SystemColors.WindowText;
-            this.p1hp.FillColor = System.Drawing.Color.Red;
-            this.p1hp.FillGradientColor = System.Drawing.Color.Maroon;
-            this.p1hp.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.Vertical;
-            this.p1hp.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid;
-            this.p1hp.Location = new System.Drawing.Point(15, 64);
-            this.p1hp.Name = "p1hp";
-            this.p1hp.Size = new System.Drawing.Size(122, 26);
             // 
             // label1
             // 
@@ -490,9 +493,10 @@ namespace Bookworm_Adventures
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.shapeContainer1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Word Adventures";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
